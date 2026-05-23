@@ -1,0 +1,429 @@
+export type Provider = {
+  name: string
+  specialty: string
+  distance: string
+  rate: string
+  rating: number
+  jobs: string
+  responseTime: string
+  availability: string
+  phone: string
+  whatsapp: string
+  tags: string[]
+}
+
+export type ServiceCategory = {
+  name: string
+  blurb: string
+  highlight: string
+  averageRate: string
+  responseWindow: string
+  providers: Provider[]
+}
+
+export const serviceData: ServiceCategory[] = [
+  {
+    name: 'Electricians',
+    blurb:
+      'Emergency wiring fixes, fan installation, switchboard repair, inverter setup, and new electrical fittings.',
+    highlight: 'Most booked for urgent home repairs and same-day wiring support.',
+    averageRate: 'Starts from Rs 299',
+    responseWindow: '10 to 25 min average response',
+    providers: [
+      {
+        name: 'Ravi Electrical Works',
+        specialty: 'Home wiring and inverter support',
+        distance: '1.2 km away',
+        rate: 'Rs 299 visit',
+        rating: 4.9,
+        jobs: '210+ jobs',
+        responseTime: 'Responds in 12 min',
+        availability: 'Available today',
+        phone: '+91 98765 11001',
+        whatsapp: '+91 98765 11001',
+        tags: ['Wiring', 'MCB', 'Fan install'],
+      },
+      {
+        name: 'SparkFix Services',
+        specialty: 'Switchboard, lighting, and fuse repairs',
+        distance: '2.4 km away',
+        rate: 'Rs 349 visit',
+        rating: 4.8,
+        jobs: '160+ jobs',
+        responseTime: 'Responds in 18 min',
+        availability: 'Available now',
+        phone: '+91 98765 11002',
+        whatsapp: '+91 98765 11002',
+        tags: ['Lighting', 'Fuse', 'Repairs'],
+      },
+      {
+        name: 'Urban Current',
+        specialty: 'Commercial and residential troubleshooting',
+        distance: '3.1 km away',
+        rate: 'Rs 399 visit',
+        rating: 4.7,
+        jobs: '120+ jobs',
+        responseTime: 'Responds in 20 min',
+        availability: 'Slots after 5 PM',
+        phone: '+91 98765 11003',
+        whatsapp: '+91 98765 11003',
+        tags: ['Commercial', 'Fault finding', 'CCTV power'],
+      },
+    ],
+  },
+  {
+    name: 'Plumbers',
+    blurb:
+      'Tap leakage, pipe replacement, motor fitting, bathroom maintenance, and water flow troubleshooting.',
+    highlight: 'Best for urgent leakage fixes and quick bathroom service calls.',
+    averageRate: 'Starts from Rs 249',
+    responseWindow: '15 to 30 min average response',
+    providers: [
+      {
+        name: 'Aqua Care Plumbing',
+        specialty: 'Leakage and bathroom repair',
+        distance: '900 m away',
+        rate: 'Rs 249 visit',
+        rating: 4.9,
+        jobs: '240+ jobs',
+        responseTime: 'Responds in 11 min',
+        availability: 'Available now',
+        phone: '+91 98765 12001',
+        whatsapp: '+91 98765 12001',
+        tags: ['Leaks', 'Pipes', 'Bathroom fittings'],
+      },
+      {
+        name: 'PipeSure Solutions',
+        specialty: 'Kitchen sink and water motor service',
+        distance: '2.1 km away',
+        rate: 'Rs 299 visit',
+        rating: 4.8,
+        jobs: '180+ jobs',
+        responseTime: 'Responds in 16 min',
+        availability: 'Available today',
+        phone: '+91 98765 12002',
+        whatsapp: '+91 98765 12002',
+        tags: ['Motor', 'Sink', 'Water line'],
+      },
+      {
+        name: 'FlowFast Plumbers',
+        specialty: 'Drain cleaning and line replacement',
+        distance: '3.8 km away',
+        rate: 'Rs 399 visit',
+        rating: 4.7,
+        jobs: '130+ jobs',
+        responseTime: 'Responds in 24 min',
+        availability: 'Morning slots open',
+        phone: '+91 98765 12003',
+        whatsapp: '+91 98765 12003',
+        tags: ['Drain', 'Replacement', 'Maintenance'],
+      },
+    ],
+  },
+  {
+    name: 'Carpenters',
+    blurb:
+      'Furniture assembly, door repair, modular storage adjustments, and custom woodwork for homes and offices.',
+    highlight: 'Popular for furniture fixes, wardrobes, and quick home touch-ups.',
+    averageRate: 'Starts from Rs 399',
+    responseWindow: '20 to 40 min average response',
+    providers: [
+      {
+        name: 'FineEdge Carpentry',
+        specialty: 'Furniture assembly and repair',
+        distance: '1.5 km away',
+        rate: 'Rs 399 visit',
+        rating: 4.9,
+        jobs: '150+ jobs',
+        responseTime: 'Responds in 18 min',
+        availability: 'Available today',
+        phone: '+91 98765 13001',
+        whatsapp: '+91 98765 13001',
+        tags: ['Furniture', 'Assembly', 'Repair'],
+      },
+      {
+        name: 'WoodCraft Local',
+        specialty: 'Door, shelf, and wardrobe fixes',
+        distance: '2.8 km away',
+        rate: 'Rs 449 visit',
+        rating: 4.8,
+        jobs: '140+ jobs',
+        responseTime: 'Responds in 21 min',
+        availability: 'Available now',
+        phone: '+91 98765 13002',
+        whatsapp: '+91 98765 13002',
+        tags: ['Door repair', 'Shelves', 'Wardrobes'],
+      },
+      {
+        name: 'Hammer & Grain',
+        specialty: 'Custom home woodwork',
+        distance: '4.2 km away',
+        rate: 'Rs 599 visit',
+        rating: 4.7,
+        jobs: '90+ jobs',
+        responseTime: 'Responds in 29 min',
+        availability: 'Next slot tomorrow',
+        phone: '+91 98765 13003',
+        whatsapp: '+91 98765 13003',
+        tags: ['Custom work', 'Panels', 'Cabinets'],
+      },
+    ],
+  },
+  {
+    name: 'Painters',
+    blurb:
+      'Single-room refresh, wall texture touch-ups, exterior jobs, and quick repainting before move-in or handover.',
+    highlight: 'Useful for compact projects and last-minute painting needs.',
+    averageRate: 'Starts from Rs 699',
+    responseWindow: '30 to 60 min average response',
+    providers: [
+      {
+        name: 'FreshCoat Painters',
+        specialty: 'Interior wall repainting',
+        distance: '2.6 km away',
+        rate: 'Rs 699 per room',
+        rating: 4.8,
+        jobs: '95+ jobs',
+        responseTime: 'Responds in 31 min',
+        availability: 'Available this week',
+        phone: '+91 98765 14001',
+        whatsapp: '+91 98765 14001',
+        tags: ['Interior', 'Touch-up', 'Matte finish'],
+      },
+      {
+        name: 'ColorLine Services',
+        specialty: 'Texture and accent wall work',
+        distance: '3.4 km away',
+        rate: 'Rs 899 per room',
+        rating: 4.7,
+        jobs: '80+ jobs',
+        responseTime: 'Responds in 38 min',
+        availability: 'Available today',
+        phone: '+91 98765 14002',
+        whatsapp: '+91 98765 14002',
+        tags: ['Texture', 'Accent', 'Finishing'],
+      },
+      {
+        name: 'Prime Paint Crew',
+        specialty: 'Exterior repainting and prep',
+        distance: '5.1 km away',
+        rate: 'Custom quote',
+        rating: 4.6,
+        jobs: '70+ jobs',
+        responseTime: 'Responds in 42 min',
+        availability: 'Weekend slots open',
+        phone: '+91 98765 14003',
+        whatsapp: '+91 98765 14003',
+        tags: ['Exterior', 'Prep work', 'Primer'],
+      },
+    ],
+  },
+  {
+    name: 'Cleaners',
+    blurb:
+      'Deep cleaning, kitchen and washroom cleaning, sofa care, and move-in or move-out cleanup services.',
+    highlight: 'Strong fit for same-day cleaning and recurring household support.',
+    averageRate: 'Starts from Rs 499',
+    responseWindow: '15 to 35 min average response',
+    providers: [
+      {
+        name: 'NeatNest Cleaning',
+        specialty: 'Deep home cleaning',
+        distance: '1.1 km away',
+        rate: 'Rs 499 session',
+        rating: 4.9,
+        jobs: '260+ jobs',
+        responseTime: 'Responds in 14 min',
+        availability: 'Available now',
+        phone: '+91 98765 15001',
+        whatsapp: '+91 98765 15001',
+        tags: ['Deep clean', 'Kitchen', 'Bathroom'],
+      },
+      {
+        name: 'FreshHome Crew',
+        specialty: 'Move-in and move-out cleaning',
+        distance: '2.7 km away',
+        rate: 'Rs 799 session',
+        rating: 4.8,
+        jobs: '150+ jobs',
+        responseTime: 'Responds in 19 min',
+        availability: 'Available today',
+        phone: '+91 98765 15002',
+        whatsapp: '+91 98765 15002',
+        tags: ['Move-out', 'Floor care', 'Dust removal'],
+      },
+      {
+        name: 'QuickShine Services',
+        specialty: 'Sofa, carpet, and regular cleaning',
+        distance: '3.3 km away',
+        rate: 'Rs 599 session',
+        rating: 4.7,
+        jobs: '120+ jobs',
+        responseTime: 'Responds in 22 min',
+        availability: 'Slots this evening',
+        phone: '+91 98765 15003',
+        whatsapp: '+91 98765 15003',
+        tags: ['Sofa', 'Carpet', 'Recurring'],
+      },
+    ],
+  },
+  {
+    name: 'Drivers',
+    blurb:
+      'Temporary drivers, outstation rides, airport pickup support, and on-demand personal driving assistance.',
+    highlight: 'Ideal for short-term bookings, airport runs, and event transport.',
+    averageRate: 'Starts from Rs 599',
+    responseWindow: '10 to 20 min average response',
+    providers: [
+      {
+        name: 'CityRide Drivers',
+        specialty: 'Local and daily commute driving',
+        distance: '800 m away',
+        rate: 'Rs 599 half day',
+        rating: 4.9,
+        jobs: '190+ trips',
+        responseTime: 'Responds in 9 min',
+        availability: 'Available now',
+        phone: '+91 98765 16001',
+        whatsapp: '+91 98765 16001',
+        tags: ['City commute', 'Short notice', 'Manual/auto'],
+      },
+      {
+        name: 'Airport Route Assist',
+        specialty: 'Airport pickups and drop-offs',
+        distance: '1.9 km away',
+        rate: 'Rs 699 trip',
+        rating: 4.8,
+        jobs: '170+ trips',
+        responseTime: 'Responds in 13 min',
+        availability: 'Available today',
+        phone: '+91 98765 16002',
+        whatsapp: '+91 98765 16002',
+        tags: ['Airport', 'Night shifts', 'Reliable'],
+      },
+      {
+        name: 'SafeMiles Drivers',
+        specialty: 'Outstation and event driving',
+        distance: '3.6 km away',
+        rate: 'Custom quote',
+        rating: 4.7,
+        jobs: '110+ trips',
+        responseTime: 'Responds in 18 min',
+        availability: 'Weekend bookings open',
+        phone: '+91 98765 16003',
+        whatsapp: '+91 98765 16003',
+        tags: ['Outstation', 'Events', 'Premium'],
+      },
+    ],
+  },
+  {
+    name: 'Mechanics',
+    blurb:
+      'Bike and car repair, battery jumpstart, puncture assistance, regular maintenance, and doorstep diagnostics.',
+    highlight: 'Useful for roadside issues and quick doorstep servicing.',
+    averageRate: 'Starts from Rs 349',
+    responseWindow: '15 to 30 min average response',
+    providers: [
+      {
+        name: 'RoadReady Mechanics',
+        specialty: 'Doorstep bike and scooter service',
+        distance: '1.4 km away',
+        rate: 'Rs 349 visit',
+        rating: 4.8,
+        jobs: '220+ jobs',
+        responseTime: 'Responds in 15 min',
+        availability: 'Available now',
+        phone: '+91 98765 17001',
+        whatsapp: '+91 98765 17001',
+        tags: ['Bike service', 'Battery', 'Emergency'],
+      },
+      {
+        name: 'GarageOnCall',
+        specialty: 'Car diagnostics and roadside support',
+        distance: '2.2 km away',
+        rate: 'Rs 499 visit',
+        rating: 4.7,
+        jobs: '145+ jobs',
+        responseTime: 'Responds in 19 min',
+        availability: 'Available today',
+        phone: '+91 98765 17002',
+        whatsapp: '+91 98765 17002',
+        tags: ['Car repair', 'Diagnostics', 'Jumpstart'],
+      },
+      {
+        name: 'PitStop Mobile Care',
+        specialty: 'Puncture and basic service calls',
+        distance: '3.9 km away',
+        rate: 'Rs 399 visit',
+        rating: 4.6,
+        jobs: '100+ jobs',
+        responseTime: 'Responds in 24 min',
+        availability: 'Afternoon slots open',
+        phone: '+91 98765 17003',
+        whatsapp: '+91 98765 17003',
+        tags: ['Puncture', 'Oil check', 'Tune-up'],
+      },
+    ],
+  },
+  {
+    name: 'Technicians',
+    blurb:
+      'AC servicing, refrigerator repair, washing machine support, and general appliance diagnostics.',
+    highlight: 'Best for appliance breakdowns and preventive maintenance visits.',
+    averageRate: 'Starts from Rs 399',
+    responseWindow: '20 to 40 min average response',
+    providers: [
+      {
+        name: 'FixRight Appliances',
+        specialty: 'AC and refrigerator service',
+        distance: '1.7 km away',
+        rate: 'Rs 399 visit',
+        rating: 4.9,
+        jobs: '230+ jobs',
+        responseTime: 'Responds in 17 min',
+        availability: 'Available now',
+        phone: '+91 98765 18001',
+        whatsapp: '+91 98765 18001',
+        tags: ['AC', 'Fridge', 'Cooling'],
+      },
+      {
+        name: 'HomeTech Rescue',
+        specialty: 'Washing machine and appliance repair',
+        distance: '2.9 km away',
+        rate: 'Rs 449 visit',
+        rating: 4.8,
+        jobs: '170+ jobs',
+        responseTime: 'Responds in 22 min',
+        availability: 'Available today',
+        phone: '+91 98765 18002',
+        whatsapp: '+91 98765 18002',
+        tags: ['Washing machine', 'Microwave', 'Repair'],
+      },
+      {
+        name: 'ServiceLab Techs',
+        specialty: 'Installation and preventive maintenance',
+        distance: '4.4 km away',
+        rate: 'Custom quote',
+        rating: 4.7,
+        jobs: '125+ jobs',
+        responseTime: 'Responds in 28 min',
+        availability: 'Morning slots open',
+        phone: '+91 98765 18003',
+        whatsapp: '+91 98765 18003',
+        tags: ['Installation', 'Maintenance', 'AMC'],
+      },
+    ],
+  },
+]
+
+export function slugifyService(name: string) {
+  return name.toLowerCase().replace(/\s+/g, '-')
+}
+
+export function getServiceBySlug(serviceSlug?: string) {
+  if (!serviceSlug) return serviceData[0]
+  return (
+    serviceData.find((service) => slugifyService(service.name) === serviceSlug) ??
+    serviceData[0]
+  )
+}

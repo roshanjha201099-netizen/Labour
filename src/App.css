@@ -1,0 +1,212 @@
+.page-shell {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.8fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.hero-copy,
+.hero-panel,
+.feature-card,
+.benefit-panel,
+.mission,
+.category-cloud {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.hero-copy {
+  padding: 2rem;
+  min-height: 32rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.12), transparent 28rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent),
+    var(--panel);
+}
+
+.eyebrow {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-size: 0.76rem;
+  color: var(--muted-strong);
+}
+
+.hero-text {
+  max-width: 38rem;
+  font-size: 1.05rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.4rem;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-strong);
+}
+
+.button-solid {
+  color: var(--bg);
+  background: var(--text-h);
+}
+
+.button-ghost {
+  color: var(--text-h);
+  background: transparent;
+}
+
+.hero-panel {
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+  align-content: end;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
+    var(--panel);
+}
+
+.stat-card {
+  border: 1px solid var(--border);
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.stat-label {
+  display: block;
+  margin-bottom: 0.8rem;
+  color: var(--muted-strong);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.72rem;
+}
+
+.stat-card strong {
+  display: block;
+  margin-bottom: 0.7rem;
+  color: var(--text-h);
+  font-size: 1.15rem;
+}
+
+.section-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.section-heading {
+  max-width: 44rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.feature-card {
+  min-height: 9rem;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.feature-index {
+  color: var(--text-h);
+  font-size: 1.3rem;
+}
+
+.categories-section {
+  align-items: start;
+}
+
+.category-cloud {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.category-pill {
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-h);
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.benefit-panel {
+  padding: 1.6rem;
+}
+
+.benefit-panel ul {
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.benefit-panel li {
+  padding: 0.95rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.mission {
+  padding: 2rem;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 45%),
+    var(--panel);
+}
+
+.mission p:last-child {
+  max-width: 48rem;
+}
+
+@media (max-width: 960px) {
+  .page-shell {
+    padding: 1rem;
+  }
+
+  .hero,
+  .benefits,
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy {
+    min-height: auto;
+  }
+}
