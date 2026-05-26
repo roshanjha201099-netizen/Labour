@@ -49,7 +49,7 @@ export function ServiceDirectory({ activeService }: ServiceDirectoryProps) {
         </div>
 
         <div className="grid gap-6 lg:grid-cols-[1.1fr_1.9fr]">
-          <article className="rounded-3xl border border-border bg-card p-8">
+          <article className="rounded-3xl border border-border bg-card p-8 shadow-[0_20px_60px_-42px_rgba(15,23,42,0.7)]">
             <div className="mb-6 flex items-center gap-3">
               <Badge variant="secondary" className="px-3 py-1 text-sm">
                 {activeService.name}
@@ -93,19 +93,70 @@ export function ServiceDirectory({ activeService }: ServiceDirectoryProps) {
             {activeService.providers.map((provider) => (
               <article
                 key={provider.name}
-                className="flex h-full flex-col rounded-3xl border border-border bg-card p-6"
+                className="group relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-border/90 bg-card/95 p-6 shadow-[0_24px_70px_-34px_rgba(15,23,42,0.72)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_32px_90px_-34px_rgba(15,23,42,0.82)]"
+                style={{
+                  boxShadow: `0 24px 70px -34px ${provider.avatar.color}33`,
+                }}
               >
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground">
-                      {provider.name}
-                    </h3>
-                    <p className="mt-1 text-sm text-muted-foreground">
-                      {provider.specialty}
-                    </p>
+                <div
+                  className="absolute inset-x-6 top-0 h-1 rounded-b-full opacity-90"
+                  style={{
+                    background: `linear-gradient(90deg, ${provider.avatar.color}, color-mix(in srgb, ${provider.avatar.color} 30%, white))`,
+                  }}
+                />
+
+                <div
+                  className="absolute -right-12 -top-12 h-32 w-32 rounded-full blur-3xl transition-opacity duration-300 group-hover:opacity-100"
+                  style={{
+                    background: `${provider.avatar.color}22`,
+                  }}
+                />
+
+                <div className="relative flex items-start justify-between gap-4">
+                  <div className="flex items-start gap-4">
+                    <div
+                      className="flex h-16 w-16 shrink-0 items-center justify-center rounded-[1.4rem] border border-white/10 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.28)]"
+                      style={{
+                        background: `linear-gradient(135deg, ${provider.avatar.color}, rgba(15, 23, 42, 0.92))`,
+                      }}
+                    >
+                      {provider.avatar.initials}
+                    </div>
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                        Trusted provider
+                      </p>
+                      <h3 className="mt-1 text-xl font-semibold text-foreground">
+                        {provider.name}
+                      </h3>
+                      <p className="mt-1 text-sm text-muted-foreground">
+                        {provider.specialty}
+                      </p>
+                    </div>
                   </div>
-                  <div className="rounded-full border border-border px-3 py-1 text-sm text-foreground">
+                  <div className="rounded-full border border-border bg-background/80 px-4 py-2 text-base font-medium text-foreground shadow-sm">
                     {provider.rate}
+                  </div>
+                </div>
+
+                <div className="relative mt-6 rounded-[1.6rem] border border-border/80 bg-background/65 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                        Availability
+                      </p>
+                      <p className="mt-1 text-sm font-medium text-foreground">
+                        {provider.availability}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                        Starting rate
+                      </p>
+                      <p className="mt-1 text-sm font-medium text-foreground">
+                        {provider.rate}
+                      </p>
+                    </div>
                   </div>
                 </div>
 
@@ -114,36 +165,36 @@ export function ServiceDirectory({ activeService }: ServiceDirectoryProps) {
                     <Badge
                       key={tag}
                       variant="outline"
-                      className="px-3 py-1 text-[11px] uppercase tracking-[0.18em]"
+                      className="rounded-xl border-border/80 bg-background/55 px-3 py-1 text-[11px] uppercase tracking-[0.18em]"
                     >
                       {tag}
                     </Badge>
                   ))}
                 </div>
 
-                <div className="mt-5 grid gap-3 text-sm text-muted-foreground">
-                  <div className="flex items-center gap-2">
+                <div className="mt-6 grid gap-3 text-sm text-muted-foreground">
+                  <div className="flex items-center gap-2 rounded-xl bg-background/45 px-3 py-2">
                     <Star className="h-4 w-4 text-primary" />
                     <span className="text-foreground">{provider.rating}</span>
                     <span>{provider.jobs}</span>
                   </div>
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 rounded-xl bg-background/45 px-3 py-2">
                     <MapPin className="h-4 w-4 text-primary" />
                     <span>{provider.distance}</span>
                   </div>
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 rounded-xl bg-background/45 px-3 py-2">
                     <Clock3 className="h-4 w-4 text-primary" />
                     <span>{provider.responseTime}</span>
                   </div>
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 rounded-xl bg-background/45 px-3 py-2">
                     <ShieldCheck className="h-4 w-4 text-primary" />
                     <span>{provider.availability}</span>
                   </div>
                 </div>
 
-                <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                <div className="mt-auto grid gap-3 pt-6 sm:grid-cols-2">
                   <Button
-                    className="w-full"
+                    className="w-full rounded-2xl shadow-[0_12px_30px_-18px_rgba(0,0,0,0.55)]"
                     onClick={() => window.open(`tel:${provider.phone}`, '_self')}
                   >
                     <Phone className="h-4 w-4" />
@@ -151,7 +202,7 @@ export function ServiceDirectory({ activeService }: ServiceDirectoryProps) {
                   </Button>
                   <Button
                     variant="outline"
-                    className="w-full"
+                    className="w-full rounded-2xl bg-background/75"
                     onClick={() =>
                       window.open(
                         `https://wa.me/${provider.whatsapp.replace(/\D/g, '')}`,

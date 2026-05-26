@@ -1,5 +1,9 @@
 export type Provider = {
   name: string
+  avatar: {
+    initials: string
+    color: string
+  }
   specialty: string
   distance: string
   rate: string
@@ -32,6 +36,7 @@ export const serviceData: ServiceCategory[] = [
     providers: [
       {
         name: 'Ravi Electrical Works',
+        avatar: { initials: 'RE', color: '#f59e0b' },
         specialty: 'Home wiring and inverter support',
         distance: '1.2 km away',
         rate: 'Rs 299 visit',
@@ -45,6 +50,7 @@ export const serviceData: ServiceCategory[] = [
       },
       {
         name: 'SparkFix Services',
+        avatar: { initials: 'SF', color: '#0f766e' },
         specialty: 'Switchboard, lighting, and fuse repairs',
         distance: '2.4 km away',
         rate: 'Rs 349 visit',
@@ -58,6 +64,7 @@ export const serviceData: ServiceCategory[] = [
       },
       {
         name: 'Urban Current',
+        avatar: { initials: 'UC', color: '#ea580c' },
         specialty: 'Commercial and residential troubleshooting',
         distance: '3.1 km away',
         rate: 'Rs 399 visit',
@@ -81,6 +88,7 @@ export const serviceData: ServiceCategory[] = [
     providers: [
       {
         name: 'Aqua Care Plumbing',
+        avatar: { initials: 'AC', color: '#0891b2' },
         specialty: 'Leakage and bathroom repair',
         distance: '900 m away',
         rate: 'Rs 249 visit',
@@ -94,6 +102,7 @@ export const serviceData: ServiceCategory[] = [
       },
       {
         name: 'PipeSure Solutions',
+        avatar: { initials: 'PS', color: '#2563eb' },
         specialty: 'Kitchen sink and water motor service',
         distance: '2.1 km away',
         rate: 'Rs 299 visit',
@@ -107,6 +116,7 @@ export const serviceData: ServiceCategory[] = [
       },
       {
         name: 'FlowFast Plumbers',
+        avatar: { initials: 'FP', color: '#0f766e' },
         specialty: 'Drain cleaning and line replacement',
         distance: '3.8 km away',
         rate: 'Rs 399 visit',
@@ -130,6 +140,7 @@ export const serviceData: ServiceCategory[] = [
     providers: [
       {
         name: 'FineEdge Carpentry',
+        avatar: { initials: 'FC', color: '#92400e' },
         specialty: 'Furniture assembly and repair',
         distance: '1.5 km away',
         rate: 'Rs 399 visit',
@@ -143,6 +154,7 @@ export const serviceData: ServiceCategory[] = [
       },
       {
         name: 'WoodCraft Local',
+        avatar: { initials: 'WL', color: '#a16207' },
         specialty: 'Door, shelf, and wardrobe fixes',
         distance: '2.8 km away',
         rate: 'Rs 449 visit',
@@ -156,6 +168,7 @@ export const serviceData: ServiceCategory[] = [
       },
       {
         name: 'Hammer & Grain',
+        avatar: { initials: 'HG', color: '#7c2d12' },
         specialty: 'Custom home woodwork',
         distance: '4.2 km away',
         rate: 'Rs 599 visit',
@@ -179,6 +192,7 @@ export const serviceData: ServiceCategory[] = [
     providers: [
       {
         name: 'FreshCoat Painters',
+        avatar: { initials: 'FP', color: '#db2777' },
         specialty: 'Interior wall repainting',
         distance: '2.6 km away',
         rate: 'Rs 699 per room',
@@ -192,6 +206,7 @@ export const serviceData: ServiceCategory[] = [
       },
       {
         name: 'ColorLine Services',
+        avatar: { initials: 'CL', color: '#9333ea' },
         specialty: 'Texture and accent wall work',
         distance: '3.4 km away',
         rate: 'Rs 899 per room',
@@ -205,6 +220,7 @@ export const serviceData: ServiceCategory[] = [
       },
       {
         name: 'Prime Paint Crew',
+        avatar: { initials: 'PP', color: '#c2410c' },
         specialty: 'Exterior repainting and prep',
         distance: '5.1 km away',
         rate: 'Custom quote',
@@ -228,6 +244,7 @@ export const serviceData: ServiceCategory[] = [
     providers: [
       {
         name: 'NeatNest Cleaning',
+        avatar: { initials: 'NC', color: '#059669' },
         specialty: 'Deep home cleaning',
         distance: '1.1 km away',
         rate: 'Rs 499 session',
@@ -241,6 +258,7 @@ export const serviceData: ServiceCategory[] = [
       },
       {
         name: 'FreshHome Crew',
+        avatar: { initials: 'FH', color: '#0284c7' },
         specialty: 'Move-in and move-out cleaning',
         distance: '2.7 km away',
         rate: 'Rs 799 session',
@@ -254,6 +272,7 @@ export const serviceData: ServiceCategory[] = [
       },
       {
         name: 'QuickShine Services',
+        avatar: { initials: 'QS', color: '#7c3aed' },
         specialty: 'Sofa, carpet, and regular cleaning',
         distance: '3.3 km away',
         rate: 'Rs 599 session',
@@ -277,6 +296,7 @@ export const serviceData: ServiceCategory[] = [
     providers: [
       {
         name: 'CityRide Drivers',
+        avatar: { initials: 'CR', color: '#1d4ed8' },
         specialty: 'Local and daily commute driving',
         distance: '800 m away',
         rate: 'Rs 599 half day',
@@ -290,6 +310,7 @@ export const serviceData: ServiceCategory[] = [
       },
       {
         name: 'Airport Route Assist',
+        avatar: { initials: 'AR', color: '#0f766e' },
         specialty: 'Airport pickups and drop-offs',
         distance: '1.9 km away',
         rate: 'Rs 699 trip',
@@ -303,6 +324,7 @@ export const serviceData: ServiceCategory[] = [
       },
       {
         name: 'SafeMiles Drivers',
+        avatar: { initials: 'SM', color: '#9333ea' },
         specialty: 'Outstation and event driving',
         distance: '3.6 km away',
         rate: 'Custom quote',
@@ -326,6 +348,7 @@ export const serviceData: ServiceCategory[] = [
     providers: [
       {
         name: 'RoadReady Mechanics',
+        avatar: { initials: 'RM', color: '#dc2626' },
         specialty: 'Doorstep bike and scooter service',
         distance: '1.4 km away',
         rate: 'Rs 349 visit',
@@ -339,6 +362,7 @@ export const serviceData: ServiceCategory[] = [
       },
       {
         name: 'GarageOnCall',
+        avatar: { initials: 'GC', color: '#ea580c' },
         specialty: 'Car diagnostics and roadside support',
         distance: '2.2 km away',
         rate: 'Rs 499 visit',
@@ -352,6 +376,7 @@ export const serviceData: ServiceCategory[] = [
       },
       {
         name: 'PitStop Mobile Care',
+        avatar: { initials: 'PM', color: '#b45309' },
         specialty: 'Puncture and basic service calls',
         distance: '3.9 km away',
         rate: 'Rs 399 visit',
@@ -375,6 +400,7 @@ export const serviceData: ServiceCategory[] = [
     providers: [
       {
         name: 'FixRight Appliances',
+        avatar: { initials: 'FR', color: '#0891b2' },
         specialty: 'AC and refrigerator service',
         distance: '1.7 km away',
         rate: 'Rs 399 visit',
@@ -388,6 +414,7 @@ export const serviceData: ServiceCategory[] = [
       },
       {
         name: 'HomeTech Rescue',
+        avatar: { initials: 'HR', color: '#7c3aed' },
         specialty: 'Washing machine and appliance repair',
         distance: '2.9 km away',
         rate: 'Rs 449 visit',
@@ -401,6 +428,7 @@ export const serviceData: ServiceCategory[] = [
       },
       {
         name: 'ServiceLab Techs',
+        avatar: { initials: 'ST', color: '#0f766e' },
         specialty: 'Installation and preventive maintenance',
         distance: '4.4 km away',
         rate: 'Custom quote',
