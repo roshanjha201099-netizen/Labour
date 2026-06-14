@@ -39,9 +39,9 @@ export function Hero() {
             <Button
               size="lg"
               variant="outline"
-              onClick={() => navigate('/services/technicians')}
+              onClick={() => navigate('/apply-provider')}
             >
-              For Service Providers
+              Join as a Provider
             </Button>
           </div>
         </div>

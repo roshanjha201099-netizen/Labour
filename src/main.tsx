@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import './global.css'
 import App from './App'
 import { ThemeProvider } from './components/theme-provider'
+import { DataWrapper } from './context/DataWrapper'
 
 const rootElement = document.getElementById('root')
 
@@ -13,15 +14,17 @@ if (!rootElement) {
 
 createRoot(rootElement).render(
   <StrictMode>
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="dark"
-      enableSystem={false}
-      storageKey="labour-on-demand-theme"
-    >
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </ThemeProvider>
+    <DataWrapper>
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="dark"
+        enableSystem={false}
+        storageKey="labour-on-demand-theme"
+      >
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </ThemeProvider>
+    </DataWrapper>
   </StrictMode>,
 )

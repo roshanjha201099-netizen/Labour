@@ -1,103 +1,64 @@
 import { Link } from 'react-router-dom'
 
-import { Separator } from './ui/separator'
-
 export function Footer() {
   return (
-    <footer className="w-full border-t border-border bg-background">
-      <div className="mx-auto max-w-7xl px-6 py-12">
-        <div className="mb-8 grid gap-8 md:grid-cols-4">
-          <div className="flex flex-col gap-2">
-            <Link to="/" className="flex items-center gap-2">
-              <div className="flex h-6 w-6 items-center justify-center rounded-lg bg-primary">
-                <span className="text-xs font-bold text-primary-foreground">L</span>
+    <footer className="border-t border-white/8 bg-slate-950 text-white">
+      <div className="mx-auto max-w-7xl px-6 py-14">
+        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr_0.9fr]">
+          <div>
+            <Link to="/" className="flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-orange-500 text-sm font-black text-white">
+                LOD
               </div>
-              <span className="font-semibold text-foreground">Labour</span>
+              <div>
+                <p className="text-sm font-black tracking-[0.18em]">LOD</p>
+                <p className="text-xs text-white/62">Labour ON Demand</p>
+              </div>
             </Link>
-            <p className="text-sm text-foreground/70">
-              Direct connection for skilled workers
+            <p className="mt-4 max-w-md text-sm leading-7 text-white/68">
+              Connecting customers with local skilled professionals.
             </p>
           </div>
 
-          <div className="flex flex-col gap-3">
-            <p className="text-sm font-semibold text-foreground">Product</p>
-            <ul className="space-y-2 text-sm text-foreground/70">
-              <li>
-                <a href="/#features" className="transition-colors hover:text-foreground">
-                  Features
-                </a>
-              </li>
-              <li>
-                <Link to="/services" className="transition-colors hover:text-foreground">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <a href="#" className="transition-colors hover:text-foreground">
-                  Pricing
-                </a>
-              </li>
-            </ul>
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
+              Links
+            </p>
+            <div className="mt-4 grid gap-3 text-sm text-white/72">
+              <a href="/#home" className="hover:text-white">
+                About
+              </a>
+              <a href="/#services" className="hover:text-white">
+                Services
+              </a>
+              <a href="/#providers" className="hover:text-white">
+                Join Provider
+              </a>
+              <a href="/#contact" className="hover:text-white">
+                Contact
+              </a>
+              <a href="#" className="hover:text-white">
+                Privacy Policy
+              </a>
+              <a href="#" className="hover:text-white">
+                Terms
+              </a>
+            </div>
           </div>
 
-          <div className="flex flex-col gap-3">
-            <p className="text-sm font-semibold text-foreground">Company</p>
-            <ul className="space-y-2 text-sm text-foreground/70">
-              <li>
-                <a href="/#mission" className="transition-colors hover:text-foreground">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#" className="transition-colors hover:text-foreground">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="#" className="transition-colors hover:text-foreground">
-                  Careers
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="flex flex-col gap-3">
-            <p className="text-sm font-semibold text-foreground">Legal</p>
-            <ul className="space-y-2 text-sm text-foreground/70">
-              <li>
-                <a href="#" className="transition-colors hover:text-foreground">
-                  Privacy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="transition-colors hover:text-foreground">
-                  Terms
-                </a>
-              </li>
-              <li>
-                <a href="#" className="transition-colors hover:text-foreground">
-                  Contact
-                </a>
-              </li>
-            </ul>
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
+              Contact
+            </p>
+            <div className="mt-4 space-y-3 text-sm text-white/72">
+              <p>Phone / WhatsApp: +91 6290 123 186</p>
+              <p>Email: support@lod_app.in</p>
+            </div>
           </div>
         </div>
 
-        <Separator className="my-8" />
-
-        <div className="flex flex-col justify-between gap-6 md:flex-row">
-          <p className="text-sm text-foreground/50">(c) 2025 Labour. All rights reserved.</p>
-          <div className="flex gap-6">
-            <a href="#" className="text-sm text-foreground/50 transition-colors hover:text-foreground">
-              Twitter
-            </a>
-            <a href="#" className="text-sm text-foreground/50 transition-colors hover:text-foreground">
-              LinkedIn
-            </a>
-            <a href="#" className="text-sm text-foreground/50 transition-colors hover:text-foreground">
-              GitHub
-            </a>
-          </div>
+        <div className="mt-10 border-t border-white/8 pt-6 text-sm text-white/48">
+          (c) 2026 LOD - Labour ON Demand. All rights reserved.
         </div>
       </div>
     </footer>
